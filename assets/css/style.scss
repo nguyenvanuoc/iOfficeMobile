@@ -1,0 +1,559 @@
+$main:#4188F1;
+$text:#2A3556;
+$textD: #777B89;
+$border:#C1C7D0;
+$danger:#DD4338;
+$success:#49AD47;
+$primary:#4188F1;
+$second: #0B3D86;
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block; 
+}
+body {
+    line-height: 1; 
+}
+
+ol, ul {
+    list-style: none; 
+}
+
+blockquote, q {
+    quotes: none; 
+}
+
+blockquote {
+    &:before, &:after {
+        content: '';
+        content: none; 
+    } 
+}
+
+q {
+    &:before, &:after {
+        content: '';
+        content: none; 
+    } 
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0; 
+}
+a:hover {
+    text-decoration: none;
+}
+
+a {
+    color: inherit; 
+}
+
+a:active, a:focus {
+    text-decoration: none;
+    color: inherit; 
+}
+a{
+    text-decoration: none;
+}
+img {
+    max-width: 100%; 
+    height: auto;
+}
+
+ol,ul, li {
+    padding: 0px;
+    list-style: none;
+    margin: 0px; 
+}
+/* Let's get this party started */
+
+
+html {
+    overflow-x: hidden;
+}
+
+blockquote {
+    padding: 10px 20px;
+    margin: 0 0 20px;
+    border-left: 5px solid #eee;
+}
+@font-face {
+    font-family: 'Roboto';
+    src:url('../fonts/Roboto/Roboto-Bold.eot?#iefix') format('embedded-opentype'), 
+        url('../fonts/Roboto/Roboto-Bold.woff') format('woff'), 
+        url('../fonts/Roboto/Roboto-Bold.ttf') format('truetype'), 
+        url('../fonts/Roboto/Roboto-Bold.svg#SFUFutura') format('svg');
+    font-weight: bold;
+}
+
+
+@font-face {
+    font-family: 'Roboto';
+    src:url('../fonts/Roboto/Roboto-Light.eot?#iefix') format('embedded-opentype'), 
+        url('../fonts/Roboto/Roboto-Light.woff') format('woff'), 
+        url('../fonts/Roboto/Roboto-Light.ttf') format('truetype'), 
+        url('../fonts/Roboto/Roboto-Light.svg#SFUFutura') format('svg');
+    font-weight: 300;
+}
+
+
+@font-face {
+    font-family: 'Roboto';
+    src:url('../fonts/Roboto/Roboto-Regular.eot?#iefix') format('embedded-opentype'), 
+        url('../fonts/Roboto/Roboto-Regular.woff') format('woff'), 
+        url('../fonts/Roboto/Roboto-Regular.ttf') format('truetype'), 
+        url('../fonts/Roboto/Roboto-Regular.svg#SFUFutura') format('svg');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src:url('../fonts/Roboto/Roboto-Medium.eot?#iefix') format('embedded-opentype'), 
+        url('../fonts/Roboto/Roboto-Medium.woff') format('woff'), 
+        url('../fonts/Roboto/Roboto-Medium.ttf') format('truetype'), 
+        url('../fonts/Roboto/Roboto-Medium.svg#SFUFutura') format('svg');
+    font-weight: 500;
+}
+*{
+    box-sizing: border-box;
+}
+html {
+    font-size: 14px;
+}
+a{
+    text-decoration: none;
+    color: $main;
+}
+body {
+    font-family: 'Roboto', Arial;
+    font-size: 14px;
+    line-height: 1.4;
+    color: $text;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    background-color: #F5F6F7;
+}
+.check-action{
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    .check{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        height: 100%;
+        width: 100%;
+        z-index: 2;
+        opacity: 0;
+        margin: 0px;
+    }
+    .name{
+        position: relative;
+        display: block;
+        padding-left: 24px;
+        min-height: 24px;
+        font-family: "FluentIcons";
+        &:before{
+            content: "\eb79";
+            display: inline-block;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            vertical-align: middle;
+            width: 24px;
+            height: 24px;
+            border-radius: 2px;
+            font-size: 24px;
+            line-height: 1;
+            color: $border;
+
+        }
+        
+    }
+    .check:checked + .name{
+        &:before{
+            color: $main;
+            content: "\eb72";
+            text-align: center;
+        }
+    }
+    input[type="radio"] + .name{
+        &:before{
+            content: "\f0de";
+            
+        }
+    }
+    input[type="radio"]:checked + .name{
+        
+        &:before{
+            content: "\f0dd";
+        }
+    }
+    input[type="radio"]:checked:disabled + .name{
+        &:before{
+            color: $textD;
+        }
+    }
+}
+
+.tabs{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    border-bottom: 2px solid $main;
+    margin-bottom: 20px;
+    display: flex;
+    .check-action{
+        margin-right: 5px;
+    }
+    li{
+        width: 50%;
+        display: flex;
+        align-items: center;
+        padding: 0px 10px;
+    }
+    a{
+        padding: 10px 0px;
+        text-decoration: none;
+        color: $text;
+        display: block;
+        flex: 1;
+        min-width: 0px;
+        text-align: center;
+    }
+    .active{
+        color: $main;
+        background-color: rgba($main,0.2);
+        a{
+            color: $main;
+        }
+    }
+}
+
+.vb-item{
+    padding: 10px;
+    background: #FFFFFF;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 10px #CDCED8;
+    display: flex;
+    position: relative;
+    transition: all 0.2s ease;
+    transform: translateX(0);
+    touch-action: none;
+    .text-content{
+        flex: 1;
+        min-width: 0px;
+        margin-left: 10px;
+    }
+    .vb-title{
+        font-size: 14px;
+        margin: 0px;
+        margin-bottom: 10px;
+        font-weight: bold;
+        a{
+            color: $text;
+            text-decoration: none;
+        }
+    }
+    .vb-info{
+        display: flex;
+        justify-content: space-between;
+    }
+    .info-left{
+        margin-right: 20px;
+    }
+    .time-box{
+        .time{
+            font-size: 24px;
+            font-weight: bold;
+            color: $main;
+            margin-bottom: 5px;
+        }
+        .day{
+            font-size: 13px;
+            color: $textD;
+        }
+        
+    }
+    .li-info{
+        margin-top: 20px;
+        .icon{
+            color: $textD;
+        }
+    }
+    .actions{
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        right: 0px;
+        display: flex;
+        left: 100%;
+        .btn{
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            padding: 2px 5px;
+            background-color: $main;
+            border: 0;
+            min-width: 100px;
+            color: #fff;
+            text-align: center;
+            cursor: pointer;
+            margin-left: 2px;
+            text-decoration: none;
+            .icon{
+                display: block;
+                width: 100%;
+                margin-bottom: 5px;
+                font-size: 24px;
+            }
+
+            
+        }
+        
+    }
+    &.active{
+        transform: translateX(-200px);
+        transition:  all 0.2s ease;
+    }
+}
+
+.info-row{
+    display: flex;
+    margin-bottom: 10px;
+    .key{
+        width: 60px;
+        color: $textD;
+        margin-right: 10px;
+    }
+    .value{
+        flex: 1;
+        min-width: 0px;
+    }
+}
+
+.text-success{
+    color: $success !important;
+}
+.text-danger{
+    color: $danger !important;
+}
+.text-primary{
+    color: $primary !important;
+}
+.text-desc{
+    color: $textD !important;
+}
+.main-title{
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 10px;
+    padding: 0px 10px;
+}
+.divider-gray{
+    height: 1px;
+    margin: 10px 0px;
+    background-color: #D6DADE;
+}
+.vb-detail{
+    .box-top-info{
+        background-color: #fff;
+        box-shadow: 0px 4px 10px #CDCED8;
+        margin-bottom: 20px;
+        .key{
+            width: 80px;
+        }
+        .top{
+            padding: 10px;
+        }
+        
+    }
+    .box-form{
+        padding: 0px 10px;
+        .show{
+            color: $main;
+            display: block;
+            cursor: pointer;
+            text-align: center;
+            
+        }
+    }
+    
+}
+.form-group{
+    margin-bottom: 15px;
+}
+.file-box{
+    padding: 10px;
+    display: flex;
+    .text-content{
+        flex: 1;
+        min-width: 0px;
+        margin-left: 10px;
+    }
+    .icon{
+        font-size: 24px;
+        color: $danger;
+    }
+    .filename{
+        display: block;
+        margin-bottom: 7px;
+        font-weight: normal;
+    }
+    .text-m{
+        color: $textD;
+    }
+}
+.box-doc-related{
+    background-color: #fff;
+    margin-bottom: 20px;
+    .related-item{
+        padding: 10px;
+    }
+    
+}
+.related-item{
+    display: flex;
+    padding: 10px 0px;
+    justify-content: space-between;
+    .time{
+        color: $textD;
+    }
+    .info-right{
+        .date{
+            font-weight: bold;
+
+        }
+        .text-m{
+            font-weight: normal;
+        }
+    }
+    .info-left{
+        .date{
+            color: $textD;
+        }
+    }
+    
+    .name{
+        color: $text;
+    }
+}
+
+.box-comment-related{
+    background-color: #fff;
+    .head{
+        background: #DAE6F6;
+        text-align: center;
+        padding: 10px;
+        font-weight: bold;
+        color: $main;
+        border-bottom: 2px solid $main;
+        margin-bottom: 10px;
+    }
+    .box{
+        padding: 0px 10px;
+    }
+    .title-m{
+        margin-bottom: 10px;
+    }
+    .box-forward{
+        .info-row{
+            .key{
+                display: flex;
+                width: 100px;
+            }
+            .icon{
+                color: $text;
+                margin-top: 3px;
+            }
+        }
+    }
+}
+
+.btn{
+    padding: 10px 10px;
+    font-weight: 500;
+    background-color: transparent;
+    border: 1px solid transparent;
+    display: inline-block;
+    border-radius: 8px;
+    cursor: pointer;
+    &:hover{
+        background-color: #f5f5f5;
+    }
+    &.btn-main{
+        background-color: $second;
+        color: #fff;
+        &:hover{
+            background-color: $main;
+            
+        }
+
+    }
+}
+.form-control{
+    border: 1px solid $border;
+    padding: 10px 10px;
+    width: 100%;
+    outline: 0px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(235, 240, 250, 0.5);
+    &:focus{
+        border-color: $second;
+    }
+}
+.actions{
+    text-align: center;
+    margin-bottom: 20px;
+    .btn{
+        margin: 2px;
+    }
+}
+
+.table{
+    width: 100%;
+    td,th{
+        padding: 7px 10px;
+        vertical-align: top;
+    }
+    .expand{
+        width: 20px;
+    }
+    th{
+        text-align: left;
+        background-color:#F5F6F7 ;
+        border-bottom: 2px solid $main;
+    }
+    .expand-name{
+        display: flex;
+        .icon{
+            width: 16px;
+        }
+        .indent{
+            width: 16px;
+        }
+        .name{
+            flex: 1;
+            margin-left: 3px;
+            min-width: 0px;
+        }
+    }
+    .child {
+        display: none;
+        &.active{
+            display: table-row;
+        }
+    }
+}
