@@ -277,9 +277,12 @@
             //     $(this).removeClass('active');
             //     e.preventDefault();
             // });
+            $(".vb-item").click(function () {
+                window.location.href = $(this).attr("data-href");
+            });
             let touchstartX = 0
             let touchendX = 0
-
+            
             const items = document.querySelectorAll('.vb-item');
             for (let i = 0; i < items.length; i++) {
                 items[i].addEventListener('touchstart', e => {
@@ -299,9 +302,7 @@
                 })
                 
             }
-            $(".vb-item").click(function(){
-                window.location.href= $(this).attr("data-href");
-            });
+           
 
         });
     </script>
