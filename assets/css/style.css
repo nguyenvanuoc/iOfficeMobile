@@ -79,9 +79,6 @@ blockquote {
   src: url("../fonts/Roboto/Roboto-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto/Roboto-Medium.woff") format("woff"), url("../fonts/Roboto/Roboto-Medium.ttf") format("truetype"), url("../fonts/Roboto/Roboto-Medium.svg#SFUFutura") format("svg");
   font-weight: 500; }
 
-* {
-  box-sizing: border-box; }
-
 html {
   font-size: 14px; }
 
@@ -89,7 +86,7 @@ a {
   text-decoration: none;
   color: #4188F1; }
 
-body {
+body, html {
   font-family: 'Roboto', Arial;
   font-size: 14px;
   line-height: 1.4;
@@ -100,10 +97,16 @@ body {
   overflow-x: hidden;
   background-color: #F5F6F7; }
 
+* {
+  font-family: 'Roboto', Arial;
+  box-sizing: border-box; }
+
+.tright {
+  text-align: right !important; }
+
 .check-action {
   display: inline-block;
-  position: relative;
-  vertical-align: middle; }
+  position: relative; }
   .check-action .check {
     position: absolute;
     top: 0px;
@@ -118,30 +121,33 @@ body {
   .check-action .name {
     position: relative;
     display: block;
-    padding-left: 24px;
-    min-height: 24px;
-    font-family: "FluentIcons"; }
+    font-family: "ap"; }
     .check-action .name:before {
-      content: "\eb79";
+      content: "";
       display: inline-block;
-      position: absolute;
-      top: 0px;
-      left: 0px;
       vertical-align: middle;
-      width: 24px;
-      height: 24px;
-      border-radius: 2px;
-      font-size: 24px;
-      line-height: 1;
-      color: #C1C7D0; }
+      width: 16px;
+      height: 16px;
+      border-radius: 3px;
+      font-size: 12px;
+      line-height: 16px;
+      text-align: center;
+      color: #D6DADE;
+      border: 1.5px solid #D6DADE;
+      background-color: #fff; }
   .check-action .check:checked + .name:before {
-    color: #4188F1;
-    content: "\eb72";
-    text-align: center; }
+    color: #fff;
+    border-color: #4188F1;
+    background-color: #4188F1;
+    content: "\e94d"; }
   .check-action input[type="radio"] + .name:before {
-    content: "\f0de"; }
+    content: "";
+    border-radius: 50%; }
   .check-action input[type="radio"]:checked + .name:before {
-    content: "\f0dd"; }
+    background-color: #fff;
+    font-size: 16px;
+    color: #4188F1;
+    content: "\e6c7"; }
   .check-action input[type="radio"]:checked:disabled + .name:before {
     color: #777B89; }
 
@@ -289,11 +295,21 @@ body {
 
 .vb-detail .box-form {
   padding: 0px 10px; }
-  .vb-detail .box-form .show {
-    color: #4188F1;
-    display: block;
-    cursor: pointer;
-    text-align: center; }
+
+.vb-detail .show {
+  color: #4188F1;
+  display: block;
+  cursor: pointer;
+  text-align: center; }
+
+.bold {
+  font-weight: bold !important; }
+
+.fw5 {
+  font-weight: 500 !important; }
+
+.hidden {
+  display: none !important; }
 
 .form-group {
   margin-bottom: 15px; }
@@ -355,7 +371,7 @@ body {
     width: 100px; }
   .box-comment-related .box-forward .info-row .icon {
     color: #2A3556;
-    margin-top: 3px; }
+    margin-right: 5px; }
 
 .btn {
   padding: 10px 10px;
@@ -374,7 +390,7 @@ body {
       background-color: #4188F1; }
 
 .form-control {
-  border: 1px solid #C1C7D0;
+  border: 1px solid #D6DADE;
   padding: 10px 10px;
   width: 100%;
   outline: 0px;
@@ -389,11 +405,19 @@ body {
   .actions .btn {
     margin: 2px; }
 
+.list-checks {
+  display: flex;
+  flex-wrap: wrap; }
+  .list-checks .item {
+    margin-right: 10px;
+    margin-bottom: 10px; }
+
 .table {
   width: 100%; }
   .table td, .table th {
     padding: 7px 10px;
-    vertical-align: top; }
+    vertical-align: middle;
+    border-bottom: 1px solid #D6DADE; }
   .table .expand {
     width: 20px; }
   .table th {

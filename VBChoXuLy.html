@@ -17,7 +17,7 @@
     <script src="assets/vendor/jquery/jquery-3.5.1.slim.min.js"></script>
     <!-- <script src="assets/vendor/jquery-mobile/jquery.mobile-1.5.0-alpha.1.min.js"></script> -->
     <!-- <link rel="stylesheet" href="assets/vendor/jquery-mobile/jquery.mobile-1.5.0-alpha.1.min.css"> -->
-    <link rel="stylesheet" href="assets/vendor/FluentIcon/style.css">
+    <link rel="stylesheet" href="assets/vendor/ap8/css/style.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -50,7 +50,7 @@
                             <div class="day">02/05/2021</div>
                         </div>
                         <div class="li-info">
-                            <span class="icon fl_person_regular"></span>
+                            <span class="icon -ap icon-user6"></span>
                             Phối hợp
                         </div>
                     </div>
@@ -106,7 +106,7 @@
                             <div class="day">02/05/2021</div>
                         </div>
                         <div class="li-info">
-                            <span class="icon fl_person_regular"></span>
+                            <span class="icon -ap icon-user6"></span>
                             Phối hợp
                         </div>
                     </div>
@@ -162,7 +162,7 @@
                             <div class="day">02/05/2021</div>
                         </div>
                         <div class="li-info">
-                            <span class="icon fl_person_regular"></span>
+                            <span class="icon -ap icon-user6"></span>
                             Phối hợp
                         </div>
                     </div>
@@ -218,7 +218,7 @@
                             <div class="day">02/05/2021</div>
                         </div>
                         <div class="li-info">
-                            <span class="icon fl_person_regular"></span>
+                            <span class="icon -ap icon-user6"></span>
                             Phối hợp
                         </div>
                     </div>
@@ -296,17 +296,19 @@
 
                         if (touchendX < touchstartX)
                             $(".vb-item").removeClass("active");
-                            items[i].classList.add("active");
-                            console.log("demo");
+                        items[i].classList.add("active");
+                        console.log("demo");
                         if (touchendX > touchstartX)
                             items[i].classList.remove("active");
-                            console.log("remove-demo");
+                        console.log("remove-demo");
                     })
 
                 }
-            }, 300);
-            
-           
+            }, 1000);
+            $(".check").click(function(e){
+                e.stopPropagation();
+            });
+
 
         });
     </script>
