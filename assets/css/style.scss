@@ -532,6 +532,9 @@ body,html {
     width: 100%;
     outline: 0px;
     border-radius: 8px;
+    background-color: #fff;
+    text-align: left;
+    font-size: 1rem;
     box-shadow: 0px 4px 8px rgba(235, 240, 250, 0.5);
     &:focus{
         border-color: $second;
