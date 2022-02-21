@@ -299,10 +299,8 @@
                 })
                 
             }
-            
-            
-            $(".vb-item").on("click", function (e) {
-                $(this).removeClass('active');
+            $(".vb-item").click(function(){
+                window.location.href= $(this).attr("data-href");
             });
 
         });
