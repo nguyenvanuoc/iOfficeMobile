@@ -249,7 +249,6 @@ body {
     position: relative;
     transition: all 0.2s ease;
     transform: translateX(0);
-    touch-action: none;
     .text-content{
         flex: 1;
         min-width: 0px;

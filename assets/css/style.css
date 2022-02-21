@@ -181,8 +181,7 @@ body {
   display: flex;
   position: relative;
   transition: all 0.2s ease;
-  transform: translateX(0);
-  touch-action: none; }
+  transform: translateX(0); }
   .vb-item .text-content {
     flex: 1;
     min-width: 0px;
