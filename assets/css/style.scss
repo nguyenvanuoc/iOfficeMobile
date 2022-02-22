@@ -261,10 +261,13 @@ body,html {
     position: relative;
     transition: all 0.2s ease;
     transform: translateX(0);
+    .check-action{
+        margin-right: 5px;
+    }
     .text-content{
         flex: 1;
         min-width: 0px;
-        margin-left: 10px;
+        
     }
     .vb-title{
         font-size: 14px;
@@ -281,7 +284,13 @@ body,html {
         justify-content: space-between;
     }
     .info-left{
-        margin-right: 20px;
+        margin-right: 10px;
+    }
+    @media(max-width:1300px){
+        .info-right{
+            flex: 1;
+            min-width: 0px;
+        }
     }
     .time-box{
         .time{
@@ -326,6 +335,9 @@ body,html {
             margin-left: 2px;
             border-radius: 0px;
             text-decoration: none;
+            &:focus{
+                background-color: $second;
+            }
             .icon{
                 display: block;
                 width: 100%;
@@ -369,6 +381,12 @@ body,html {
 .text-desc{
     color: $textD !important;
 }
+.text-uppercase{
+    text-transform: uppercase !important;
+}
+.w20{
+    width: 20px !important;
+}
 .main-title{
     text-transform: uppercase;
     font-weight: 500;
@@ -380,11 +398,14 @@ body,html {
     margin: 10px 0px;
     background-color: #D6DADE;
 }
+.pad10{
+    padding: 10px !important;
+}
 .vb-detail{
     .box-top-info{
         background-color: #fff;
         box-shadow: 0px 4px 10px #CDCED8;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         .key{
             width: 80px;
         }
@@ -418,6 +439,35 @@ body,html {
 .form-group{
     margin-bottom: 15px;
 }
+.rotate90{
+    transform: rotate(90deg) !important;
+}
+.avatar{
+    width: 32px;
+    height: 32px;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+}
+.user{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    .text-content{
+        flex: 1;
+        margin-left: 10px;
+        min-width: 0px;
+    }
+    .avatar{
+        width: 48px;
+        height: 48px;
+    }
+
+}
+
 .file-box{
     padding: 10px;
     display: flex;
@@ -434,6 +484,7 @@ body,html {
         display: block;
         margin-bottom: 7px;
         font-weight: normal;
+        white-space: pre-wrap;
     }
     .text-m{
         color: $textD;
@@ -556,6 +607,10 @@ body,html {
         margin-bottom: 10px;
     }
 }
+.table-content{
+    overflow: auto;
+    margin-bottom: 20px;
+}
 .table{
     width: 100%;
     td,th{
@@ -567,9 +622,15 @@ body,html {
         width: 20px;
     }
     th{
+        text-transform: uppercase;
         text-align: left;
         background-color:#F5F6F7 ;
         border-bottom: 2px solid $main;
+    }
+    tr:last-child{
+        td{
+            border-bottom: 0px;
+        }
     }
     .expand-name{
         display: flex;
@@ -589,6 +650,184 @@ body,html {
         display: none;
         &.active{
             display: table-row;
+        }
+    }
+    .btn{
+        padding: 2px 5px;
+        color: $text;
+    }
+}
+
+.comment-bottom{
+    .comment-actions{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .btn{
+            font-weight: normal;
+        }
+    }
+    .user-send{
+        padding: 10px;
+        border-top: 1px solid #f0f0f0;
+        text-align: right;
+    }
+}
+.comment-item{
+    background-color: #fff;
+    margin-bottom: 10px;
+    box-shadow: 0px 4px 10px #CDCED8;
+    
+}
+.comment-mess{
+    display: flex;
+    align-items: flex-end;
+    padding: 10px;
+    .mess-box{
+        flex: 1;
+        min-width: 0px;
+        margin-left: 20px;
+        background-color:#F0F2F5 ;
+        border-radius: 15px;
+        padding: 10px;
+        position: relative;
+        &:before{
+            content: "";
+            position: absolute;
+            bottom: 5px;
+            left: -12px;
+            border-top: 12px solid transparent;
+            border-right: 16px solid #F0F2F5;
+        }
+    }
+    .name{
+        font-weight: bold;
+        margin-bottom: 3px;
+
+    }
+    .article{
+        margin-top: 10px;
+    }
+}
+
+.upload{
+    position: relative;
+    border: 1px solid $border;
+    padding: 7px 10px;
+    border-radius: 8px;
+    .file{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+    }
+    .icon{
+        color: $textD;
+    }
+}
+
+.list-files{
+    .item{
+        display: flex;
+        align-items: center;
+        padding: 10px 0px;
+        border-top: 1px solid #e5e5e5;
+        justify-content: space-between;
+    }
+    .text-m{
+        flex: 1;
+        margin: 0px 10px;
+        min-width: 0px;
+        white-space: pre-wrap;
+        color: $main;
+    }
+    .icon{
+        font-size: 18px;
+        color: $danger;
+    }
+    .btn{
+        color: $danger;
+        padding: 2px 5px;
+    }
+    
+}
+
+.ds-nguoi-nhan{
+    .top{
+        background-color: $second;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+    .search{
+        position: relative;
+        .form-control{
+            box-shadow: none;
+            background-color: #0356AA;
+            border-radius: 20px;
+            border: 0px;
+            padding-right: 20px;
+            &::placeholder{
+                color: #68ADF2;
+            }
+            &:focus{
+                color: #fff;
+            }
+        }
+        .icon{
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            padding: 10px;
+            color:#68ADF2 ;
+        }
+
+    }
+    .list-user{
+        .item{
+            display: flex;
+            margin-bottom: 10px;
+            padding: 10px 10px;
+            box-shadow: 0px 4px 4px rgba(205, 206, 216, 0.25);
+            background-color: #fff;
+        }
+        .user-box{
+            text-align: center;
+            .time{
+                font-size: 12px;
+                color: $textD;
+            }
+        }
+        .avatar{
+            width: 48px;
+            height: 48px;
+            display: inline-block;
+        }
+        .text-content{
+            flex: 1;
+            margin-left: 10px;
+            min-width: 0px;
+            div{
+                margin-bottom: 3px;
+            }
+            .date{
+                color: $textD;
+            }
+            .name{
+                font-weight: bold;
+            }
+        }
+    }
+    .dsdv-table{
+        tbody{
+            tr{
+                background-color: #fff;
+                border-bottom: 2px solid #F0F2F5;
+            }
+            td{
+                border-bottom: 0px;
+            }
         }
     }
 }
