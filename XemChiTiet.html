@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Thông tin kế hoạch mở rộng</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" id="viewport">
+    </meta>
+    <meta content="Thời trang nam phong cách trẻ trung năng động của nam giới, xu thế thời trang 2016" name="description">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    </meta>
+    <meta content="width=device-width, initial-scale=1" name="viewport" id="viewport">
+    </meta>
+    <meta content="index, follow" name="ROBOTS">
+    <link rel="stylesheet" href="assets/vendor/ap8/css/style.css">
+    <script src="assets/vendor/jquery/jquery-3.6.0.min.js"></script>
+    <!-- <script src="assets/vendor/jquery-mobile/jquery.mobile-1.5.0-alpha.1.min.js"></script> -->
+    <!-- <link rel="stylesheet" href="assets/vendor/jquery-mobile/jquery.mobile-1.5.0-alpha.1.min.css"> -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="overlay-common"></div>
+    <div class="sidebar-menus">
+        <div class="top">
+            <div class="avatar">
+                <img src="assets/img/avatar-default.png" alt="">
+            </div>
+            <div class="name">Đào Thị Dunng</div>
+        </div>
+        <div class="menus">
+            <ul>
+                <li>
+                    <a class="item">
+                        <span class="icon -ap icon_fluent_document_search_24_regular"></span>
+                        <span class="text-m">Khảo sát</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a class="item">
+                        <span class="icon -ap icon_fluent_document_arrow_right_24_regular"></span>
+                        <span class="text-m">Thu Thập ý kiến</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="item">
+                        <span class="icon -ap icon_fluent_sign_out_24_regular"></span>
+                        <span class="text-m">Đăng xuất</span>
+                    </a>
+                </li>
+            </ul>
+            
+            
+            
+        </div>
+    </div>
+    <div class="app-page">
+
+        <div class="header">
+            <div class="logo">
+                <img src="assets/img/logo.png" alt="">
+            </div>
+            <div class="nav-toggle -ap icon-menu">
+            </div>
+        </div>
+        <div class="main-wrapper">
+            <div class="page-content">
+                <ul class="breadcrumb">
+                    <li><a href="#">Thu thập ý kiến</a></li>
+                    <li><a href="#">Xem chi tiết</a></li>
+                </ul>
+                <div class="ks-detail-box">
+                    <div class="head">
+                        <h1 class="ks-title">Lấy ý kiến người dân về hỗ trợ người lao động năm 2022</h1>
+                        <div class="ks-date">Ngày bắt đầu 5/4/2022 - kết thúc 5/6/2022</div>
+
+                    </div>
+                    <div class="article">
+                        <p>
+                            <img src="https://maxdream.vn/wp-content/uploads/2021/09/Banner-trang-con-gioi-thieu-Maxdream-1.png" alt="">
+                        </p>
+                        <p><strong>Nội dung</strong></p>
+                        <p>Người dân cho ý kiến về Nghị quyết 145/NQ-CP: Phụ cấp chống dịch tối đa 450.000 đồng/người/ngày.</p>
+                        <div class="list-files">
+                            <div class="item">
+                                <a href="#">
+                                    <span class="icon -ap icon-attachment3"></span>
+                                    <em class="text-m">Nghiquyet145/NQ-CP</em>
+                                </a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="form-group">
+                        <p>
+                            <strong><span class="-ap icon_fluent_send_24_regular main"></span> Gửi ý kiến</strong>
+                        </p>
+                        <textarea class="form-control" style="height: 160px;resize: vertical;" placeholder="Nhập nội dung ý kiến"></textarea>
+                    </div>
+                    <div class="upload-button">
+                        <button class="btn main normal">
+                            <span class="-ap icon_fluent_arrow_upload_24_regular"></span>  Upload file
+                        </button>
+                    </div>
+                    <div class="group-buttons">
+                        <button class="btn btn-main fullw">Gửi</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <p><strong>   Sở Thông tin và Truyền thông Hồ Chí Minh</strong></p>
+                <p><strong>   Địa chỉ:</strong> 59 Lý Tự Trọng, P,Bến Nghé, Quận 1, Thành phố Hồ Chí Minh <br/>
+                <strong>Điện thoại:</strong> (028) 35 202 727 - Fax: (028) 35 202 424<br />
+                <strong>Email:</strong> Stttt@tphcm.gov.vn</p>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/custom.js"></script>
+    <script>
+        $(".page-content").on('scroll', function () {
+            var scrollT=$(this).scrollTop();
+            if(scrollT>80){
+                $(".backtop").addClass("show")
+            }else{
+                $(".backtop").removeClass("show")
+            }
+        });
+        $(".backtop").click(function(){
+            $(".page-content").animate({ scrollTop: 0});
+        });
+    </script>
+</body>
+
+</html>

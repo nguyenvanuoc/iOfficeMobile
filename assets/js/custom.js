@@ -2,14 +2,12 @@
 
 $(function () {
    
-    $(".sidebar .down").click(function(){
-        $(this).parent().toggleClass("open");
-        $(this).parent().siblings().removeClass("open");
-    });
     $(".nav-toggle").click(function(){
-        $("body").toggleClass("sidebar-collapsed");
+        $(".sidebar-menus").toggleClass("open");
+        $(".overlay-common").addClass("show");
     });
-    $(".list-expand-yk .item .head").click(function(){
-    	$(this).parents(".item").toggleClass("active");
+    $(".overlay-common").click(function(){
+        $(".sidebar-menus").removeClass("open");
+        $(".overlay-common").removeClass("show");
     });
  });
